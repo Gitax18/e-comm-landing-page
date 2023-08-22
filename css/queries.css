@@ -72,6 +72,9 @@
 }
 
 @media screen and (max-width: 65rem) {
+    html{
+        font-size: 62.5%;
+    }
     .container{
         margin-bottom: 20rem;
     }
@@ -109,4 +112,20 @@
         display: block;
     }
 
+    .counter{
+        padding-inline: 2.8rem;
+        font-size: 2.4rem;
+    }
+
+    #decrease{
+        font-size: 2.8rem;
+    }
+
+    #increase{
+        font-size: 3.2rem;
+    }
+
+    .add-to-cart-btn{
+        font-size: 2rem;
+    }
 }
