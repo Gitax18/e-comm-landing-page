@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Black-low-opacity: rgb(0, 0, 0, 0.15);
+}
+
+
+/* designing header component */
+.header{
+    /* background-color: var(--Dark-grayish-blue); */
+    padding-block: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--Black-low-opacity);
+}
+
+.nav{
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+
+}
+
+.logo{
+    font-size: 3.2rem;
+    font-weight: 600;
+    letter-spacing: -0.95px;
+}
+
+.nav-items{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    color: var(--Very-dark-blue);
+}
+
+.nav-item{
+    position: relative;
+    transition: all 500ms ease-in;
+}
+
+.nav-item::after{
+    content: "";
+    height: 0.4rem;
+    width: 100%;
+    position: absolute;
+    top: 5.2rem;
+    right: 0;
+    background-color: var(--Orange);
+    visibility: hidden;
+}
+
+.nav-item:hover.nav-item::after{
+    visibility: visible;
+}
+
+.user-profile{
+    gap: 3.2rem;
+}
+
+.cart-icon svg{
+    color: var(--Black);
+    height: 2.4rem;
+}
+
+.profile-image{
+    aspect-ratio: 1/1;
+    width: 4.4rem;
+}
+
+/* Designing product page */
+.product-page{
+    height: calc(100% - 84.8px);
+    padding: 8rem 2rem 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* styling image */
+.image-container{
+    height: 100%;
+    width: 100%;
+    /* align-items: center; */
+}
+
+.image-active, .image-active img{
+    aspect-ratio: 1/1;
+    height: 40rem;
+    border-radius: 1.2rem;
+}
+
+.image-thumbnails{
+    display: flex;
+    gap: 2.4rem;
+    margin-top: 2.4rem;
+}
+
+.tb-img{
+    aspect-ratio: 1/1;
+    height: 8rem;
+    border-radius: 1.2rem;
+}
+
+.tb-active{
+    position: relative;
+    opacity: 0.35;
+}
+
+.tb-img:hover{
+    outline: 3px solid var(--Orange);
+    cursor: pointer;
+}
+
+
+/* Desingning the description part */
+.detail-container{
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description{
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.highlight{
+    color: var(--Orange);
+}

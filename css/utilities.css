@@ -1,0 +1,62 @@
+/* This files contains common css and reusable components css */
+
+
+html{
+    font-size: 62.5%;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* main container */
+.container{
+    max-width: 70vw;
+    height: 100vh;
+    margin: auto;
+}
+
+
+/* making grid component*/
+.grid{
+    display: grid;
+}
+
+/* making flex component */
+.flex{
+    display: flex;
+}
+
+/* class to hide element */
+.hidden{
+    display: none;
+}
+
+/* centering flex item */
+.flex-center{
+    align-items: center;
+    justify-content: center;
+}
+
+.align-center{
+    margin: auto;
+}
+
+
+/* making grid of 2 columns */
+.grid-col-2{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* making grid of 3 columns */
+.grid-col-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* footer attribution */
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+

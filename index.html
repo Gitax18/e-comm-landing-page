@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  
+  <title>E-commerce: product page</title>
+
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <main class="container">
+    <section class="header flex">
+
+      <nav class="nav flex">
+        <!-- hamburger menu -->
+        <svg class="hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+        <!-- close svg -->
+        <svg class="hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+        
+        
+        <!-- logo -->
+        <span class="logo">sneakers</span>
+        <!-- menu bar -->
+        <ul class="nav-items flex">
+          <li class="nav-item">collections</li>
+          <li class="nav-item">men</li>
+          <li class="nav-item">women</li>
+          <li class="nav-item">about</li>
+          <li class="nav-item">contact</li>
+        </ul>
+
+      </nav>
+
+      <!-- div for cart and profile -->
+      <div class="user-profile flex flex-center ">
+        <!-- cart icon svg -->
+        <span class="cart-icon" id="cart">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+          </svg>
+          
+          </svg>
+          
+        </span>
+        <img class="profile-image" src="images/image-avatar.png" alt="profile-image"></img>
+      </div>
+
+    </section>
+
+    <section class="product-page  ">
+      <div class="image-container ">
+          <div class="image-active align-center">
+            <img src="images/image-product-1.jpg" alt="active-image">
+          </div>
+
+          <div class="image-thumbnails flex-center">
+            <img src="images/image-product-1-thumbnail.jpg" alt="tb-img" class="tb-img tb-active" data-src="1">
+
+            <img src="images/image-product-2-thumbnail.jpg" alt="tb-img" class="tb-img" data-src="2">
+
+            <img src="images/image-product-3-thumbnail.jpg" alt="tb-img" class="tb-img" data-src="3">
+
+            <img src="images/image-product-4-thumbnail.jpg" alt="tb-img" class="tb-img" data-src="4">
+          </div>
+      </div>
+
+      <div class="detail-container flex ">
+        <!-- the top description part of the product -->
+        <div class="description flex">
+          <span class="highlight">sneaker company</span>
+          <h1 class="product-title">fall limited edition sneakers</h1>
+          <p class="product-desc">
+            These low profile sneakers are your perfect casual wear companion. Feature a durable rubber outer sole, they'll withstand everything the weather can offer.
+          </p>
+        </div>
+        <!-- Container to hold proce details -->
+        <div class="price-holder">
+          <div class="new-price-offer">
+            <h2>₹ 10,370/-</h2>
+            <span class="offer">50%</span>
+          </div>
+          <div class="old-price">
+            <strike>₹ 20740/-</strike>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+ 
+
+  
+  <div class="attribution hidden">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="scripts/index.js"></script>
+</body>
+</html>
