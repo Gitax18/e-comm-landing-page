@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution Not Ready Yet](#)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live](https://ecomm-landing-page.netlify.app/)
 
 ## My process
 My process of building this project is the first I will create the design for desktop version with HTML, CSS and then I will use Vanilla Javascript for the logic and events. Then at last I will check for breakpoints for smaller screens and make it responsible.
