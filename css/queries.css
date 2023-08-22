@@ -65,13 +65,16 @@
     .cta{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        height: 10rem;
+        height: 16rem;
         padding: 0;
     }
 
 }
 
 @media screen and (max-width: 65rem) {
+    .container{
+        margin-bottom: 20rem;
+    }
     .image-container{
         height: 100%;
         width: 100vw;
