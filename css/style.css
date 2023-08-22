@@ -13,7 +13,7 @@
     --Grayish-blue: hsl(220, 14%, 75%);
     --Light-grayish-blue: hsl(223, 64%, 98%);
     --White: hsl(0, 0%, 100%);
-    --Black: hsl(0, 0%, 0%);
+    --Black: hsl(220, 3%, 17%);
     --Black-low-opacity: rgb(0, 0, 0, 0.15);
 }
 
@@ -136,7 +136,7 @@
 .description{
     flex-direction: column;
     gap: 1.6rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 2rem;
 }
 
 /* orange highlighted text */
@@ -152,6 +152,7 @@
 .product-title{
     text-transform: capitalize;
     font-size: 3.6rem;
+    color: var(--Black);
 }
 
 .product-desc{
@@ -159,3 +160,35 @@
     color: var(--Dark-grayish-blue);
 }
 
+/* designing the holder for price and offer */
+.price-holder{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.new-price-offer{
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.new-price-offer h2{
+    font-size: 2.4rem;
+    color: var(--Black);
+}
+
+.offer{
+    background-color: var(--Pale-orange);
+    color: var(--Orange);
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: .2rem .4rem;
+    border-radius: .4rem;
+}
+
+.old-price{
+    color: var(--Grayish-blue);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
