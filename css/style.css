@@ -259,6 +259,8 @@
     color: var(--Orange);
     rotate: 90deg;  
     cursor: pointer;
+    height: 4rem;
+    width: 4rem;
 }
 
 #increase{
