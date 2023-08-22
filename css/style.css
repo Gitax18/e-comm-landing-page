@@ -115,6 +115,7 @@
     transform: translateY(-50%);
     cursor: pointer;
     display: none;
+    color: var(--Black);
 }
 
 .img-btn svg{
