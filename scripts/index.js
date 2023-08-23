@@ -1,3 +1,5 @@
+
+const body = document.querySelector('body');
 // Elements for Image changing logic
 const thumbnail_images = document.querySelectorAll('.tb-img');
 const active_image = document.querySelector('#active-img');
@@ -95,10 +97,14 @@ nextImgBtn.addEventListener('click', ()=>{
 // Hamburger menu
 hamIcon.addEventListener("click", ()=>{
     navbar.style.transform = 'translateX(0)'
+    body.style.overflow = 'hidden';
+    console.log(body)
 })
 
 closeIcon.addEventListener("click", ()=>{
     navbar.style.transform = 'translateX(-110vw)'
+    body.style.overflow = 'scroll';
+    
 })
 
 // quantity counter
