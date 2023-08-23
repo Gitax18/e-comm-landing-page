@@ -64,6 +64,10 @@
         z-index: 15;
         transform: translateX(-110vw);
     }
+
+    .nav-item::after{
+        display: none;
+    }
     
 
     /* app */
