@@ -55,19 +55,19 @@
       <div class="user-profile flex flex-center ">
         <!-- cart icon svg -->
         <span class="cart-container" id="cart">
-          <span class="cart-badge">1</span>
+          <span class="cart-badge hidden">1</span>
 
           <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /> </svg>
 
-            <div class="checkout-container">
+            <div class="checkout-container ">
               <p class="cart-title flex">Cart</p>
               <div class="cart-items">
                 <!-- remove below div when cart.empty = false -->
-                <div class="cart-empty-msg flex flex-center hidden"><span>Your cart is empty</span></div>
+                <div class="cart-empty-msg flex flex-center "><span>Your cart is empty</span></div>
 
                 <!-- template for filled cart -->
-                <div class="cart-full">
+                <div class="cart-full hidden">
                   <div class="cart-details">
                     <img src="images/image-product-1-thumbnail.jpg"  alt="cart-img" class="cart-img">
                     
@@ -112,7 +112,7 @@
               
             </button>
 
-            <img src="images/image-product-1.jpg" alt="active-image">
+            <img src="images/image-product-1.jpg" alt="active-image" id="active-img"> 
           </div>
 
           <div class="image-thumbnails flex-center">
