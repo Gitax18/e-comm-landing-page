@@ -33,7 +33,6 @@ function updateQuatity(quantity){
 
     if(currentQty == 0) cartBadge.style.display = 'none';
 
-
 }
 
 
