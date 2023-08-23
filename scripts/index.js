@@ -42,15 +42,9 @@ function showQuantity(quantity){
 
 }
 
-function updateQuatity(quantity){
-    cartBadge.style.display = 'block';
+function updateQuatity(){
+    cartBadge.style.display = 'inline-block';
 
-    // cartBadge.textContent = quantity;
-    // qty.textContent = quantity;
-
-    // const totalPrice = 10000 * quantity;
-    // cartQty.textContent = quantity;
-    // cartTotal.textContent ="₹"+totalPrice;
 
     if(currentQty == 0) {
         cartBadge.style.display = 'none';
@@ -62,7 +56,6 @@ function updateQuatity(quantity){
 
     }
 }
-
 
 
 
@@ -111,14 +104,13 @@ closeIcon.addEventListener("click", ()=>{
 // quantity counter
 let currentQty = 0;
 
-cartBadge.style.display = 'none';
 
 decQtyBtn.addEventListener('click', ()=>{
-    if(currentQty < 0){
+    if(currentQty <= 0){
         decQtyBtn.disable = true
     }else {
-        showQuantity(currentQty)
         currentQty --
+        showQuantity(currentQty)
     }
 
     console.log(currentQty);
