@@ -3,6 +3,10 @@
     .nav{
         width: 65%;
     }
+    .checkout-container{
+        left: 50%;
+        transform: translateX(-100%);
+    }
 }
 
 @media screen and (max-width:87.5rem) {
@@ -127,5 +131,12 @@
 
     .add-to-cart-btn{
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 55rem) {
+    .checkout-container{
+        width: 35rem;
+        transform: translateX(-70%);
     }
 }
