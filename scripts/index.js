@@ -83,7 +83,7 @@ thumbnail_images.forEach(img =>{ // adding event listener to all thumbnail image
 
 
 // On Mobile/Tablets
-let counter = 1;
+let counter = 2 ;
 prevImgBtn.addEventListener('click', ()=>{
     active_image.src = `images/image-product-${counter}.jpg`
     if(counter === 1){
