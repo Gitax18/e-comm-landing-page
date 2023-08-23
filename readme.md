@@ -27,8 +27,8 @@ Users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
-# screenshot
-[screenshot](screenshot.png)
+### screenshot
+![](./screenshot.png)
 
 ### Links
 
