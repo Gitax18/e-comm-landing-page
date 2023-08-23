@@ -6,6 +6,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -26,6 +27,8 @@ Users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
+# screenshot
+[screenshot](screenshot.png)
 
 ### Links
 
