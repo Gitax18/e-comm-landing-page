@@ -1,8 +1,14 @@
+// Elements for Image changing logic
 const thumbnail_images = document.querySelectorAll('.tb-img');
 const active_image = document.querySelector('#active-img');
 
 const prevImgBtn = document.querySelector('#prev-img');
 const nextImgBtn = document.querySelector('#next-img');
+
+// elements for Hambuger menu and navbar navigation
+const hamIcon = document.querySelector("#ham-icon");
+const closeIcon = document.querySelector("#close-icon");
+const navbar = document.querySelector(".nav-items");
 
 
 
@@ -40,3 +46,14 @@ nextImgBtn.addEventListener('click', ()=>{
     } else counter++
 })
 
+
+// Hamburger menu
+hamIcon.addEventListener("click", ()=>{
+    navbar.style.transform = 'translateX(0)'
+})
+
+closeIcon.addEventListener("click", ()=>{
+    navbar.style.transform = 'translateX(-110vw)'
+})
+
+// quantity counter

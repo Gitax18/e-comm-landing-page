@@ -61,6 +61,7 @@
     }
 
     .nav-items{
+        z-index: 15;
         transform: translateX(-110vw);
     }
     
