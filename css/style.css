@@ -95,7 +95,7 @@
     width: 1.76rem;
     font-weight: 800;
     text-align: center;
-    display: inline-block;
+    display: none;
     border-radius: 2rem;
     position: absolute;
     bottom: 1.6rem;
