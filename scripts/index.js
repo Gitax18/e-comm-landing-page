@@ -38,17 +38,25 @@ function showQuantity(quantity){
     cartBadge.textContent = quantity;
     qty.textContent = quantity;
 
+    if(quantity == 0){
+        cartBadge.style.display = 'none';
+        cartEmpty.style.display = "flex";
+        cartFull.style.display = 'none';
+    }
+
     const totalPrice = 10000 * quantity;
     cartQty.textContent = quantity;
     cartTotal.textContent ="₹"+totalPrice;
 
+    
+
 }
 
-function updateQuatity(){
+function updateQuatity(quantity){
     cartBadge.style.display = 'inline-block';
 
 
-    if(currentQty == 0) {
+    if(quantity == 0) {
         cartBadge.style.display = 'none';
         cartEmpty.style.display = "flex";
         cartFull.style.display = 'none';
@@ -97,7 +105,8 @@ nextImgBtn.addEventListener('click', ()=>{
 // Hamburger menu
 hamIcon.addEventListener("click", ()=>{
     navbar.style.transform = 'translateX(0)'
-    body.style.overflow = 'hidden';
+    // body.style.overflow = 'hidden';
+    navbar.style.height = '150vh'
     console.log(body)
 })
 
