@@ -86,6 +86,21 @@
     position: relative;
 }
 
+.cart-badge{
+    background-color: var(--Orange);
+    color: #fff;
+    font-size: .8rem;
+    height: 1.2rem;
+    width: 1.76rem;
+    font-weight: 800;
+    text-align: center;
+    display: inline-block;
+    border-radius: 2rem;
+    position: absolute;
+    bottom: 1.6rem;
+    left: 1rem;
+}
+
 .checkout-container{
     z-index: 11;
     position: absolute;
