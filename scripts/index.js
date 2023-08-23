@@ -10,7 +10,7 @@ const hamIcon = document.querySelector("#ham-icon");
 const closeIcon = document.querySelector("#close-icon");
 const navbar = document.querySelector(".nav-items");
 
-// elements for changing product quantity
+// elements for changing product quantity and add to cart icon 
 const decQtyBtn = document.querySelector('#decrease'); 
 const incQtyBtn = document.querySelector('#increase');
 const qty = document.querySelector('#quantity');
@@ -19,11 +19,20 @@ const cartBadge = document.querySelector('.cart-badge');
 const cartQty = document.querySelector('#prdt-qty');
 const cartTotal = document.querySelector('#cart-total');
 
+const addToCartBtn = document.querySelector('.add-to-cart-btn');
+
+// add to cart container 
+const checkoutContainer = document.querySelector('.checkout-container ');
+const cartIcon = document.querySelector('.cart-icon');
+
+const cartEmpty = document.querySelector('.cart-empty-msg');
+const cartFull = document.querySelector('.cart-full');
+
+const cartEmptyIcon = document.querySelector('#cart-remove');
+
 
 // **************** Function
-function updateQuatity(quantity){
-    cartBadge.style.display = 'block';
-
+function showQuantity(quantity){
     cartBadge.textContent = quantity;
     qty.textContent = quantity;
 
@@ -31,9 +40,30 @@ function updateQuatity(quantity){
     cartQty.textContent = quantity;
     cartTotal.textContent ="₹"+totalPrice;
 
-    if(currentQty == 0) cartBadge.style.display = 'none';
-
 }
+
+function updateQuatity(quantity){
+    cartBadge.style.display = 'block';
+
+    // cartBadge.textContent = quantity;
+    // qty.textContent = quantity;
+
+    // const totalPrice = 10000 * quantity;
+    // cartQty.textContent = quantity;
+    // cartTotal.textContent ="₹"+totalPrice;
+
+    if(currentQty == 0) {
+        cartBadge.style.display = 'none';
+        cartEmpty.style.display = "flex";
+        cartFull.style.display = 'none';
+    } else{
+        cartEmpty.style.display = "none";
+        cartFull.style.display = 'grid';
+
+    }
+}
+
+
 
 
 // **************** logic
@@ -87,17 +117,46 @@ decQtyBtn.addEventListener('click', ()=>{
     if(currentQty < 0){
         decQtyBtn.disable = true
     }else {
-        updateQuatity(currentQty)
+        showQuantity(currentQty)
         currentQty --
     }
+
+    console.log(currentQty);
 });
 
 incQtyBtn.addEventListener('click', ()=>{
     if(currentQty == 0){
         currentQty = 1;
-        updateQuatity(currentQty);
+        showQuantity(currentQty);
     } else{
         currentQty++
-        updateQuatity(currentQty)
+        showQuantity(currentQty)
     }
+    console.log(currentQty);
 });
+
+addToCartBtn.addEventListener('click',()=>{
+    updateQuatity(currentQty)
+})
+
+// Cart icon listening
+checkoutContainer.style.display = 'none';
+
+cartIcon.addEventListener('click', ()=>{
+
+    if(!currentQty > 0){
+        cartFull.style.display = 'none';
+    } else{
+        cartEmpty.style.display = "none";
+        cartFull.style.display = 'grid';
+    }
+
+    if(checkoutContainer.style.display == 'none') checkoutContainer.style.display = 'grid' 
+    else checkoutContainer.style.display = 'none';
+})
+
+cartEmptyIcon.addEventListener('click',()=>{
+    currentQty = 0;
+    updateQuatity(currentQty)
+    showQuantity(currentQty);
+})

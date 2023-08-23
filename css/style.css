@@ -80,6 +80,7 @@
 .cart-icon{
     color: var(--Black);
     height: 2rem;
+    cursor: pointer;
 }
 
 .cart-container{
