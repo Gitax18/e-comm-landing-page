@@ -10,11 +10,34 @@ const hamIcon = document.querySelector("#ham-icon");
 const closeIcon = document.querySelector("#close-icon");
 const navbar = document.querySelector(".nav-items");
 
+// elements for changing product quantity
+const decQtyBtn = document.querySelector('#decrease'); 
+const incQtyBtn = document.querySelector('#increase');
+const qty = document.querySelector('#quantity');
+const cartBadge = document.querySelector('.cart-badge');
+
+const cartQty = document.querySelector('#prdt-qty');
+const cartTotal = document.querySelector('#cart-total');
 
 
+// **************** Function
+function updateQuatity(quantity){
+    cartBadge.style.display = 'block';
 
-// logic
+    cartBadge.textContent = quantity;
+    qty.textContent = quantity;
 
+    const totalPrice = 10000 * quantity;
+    cartQty.textContent = quantity;
+    cartTotal.textContent ="₹"+totalPrice;
+
+    if(currentQty == 0) cartBadge.style.display = 'none';
+
+
+}
+
+
+// **************** logic
 // changing active image
 
 // On Desktop
@@ -57,3 +80,25 @@ closeIcon.addEventListener("click", ()=>{
 })
 
 // quantity counter
+let currentQty = 0;
+
+cartBadge.style.display = 'none';
+
+decQtyBtn.addEventListener('click', ()=>{
+    if(currentQty < 0){
+        decQtyBtn.disable = true
+    }else {
+        updateQuatity(currentQty)
+        currentQty --
+    }
+});
+
+incQtyBtn.addEventListener('click', ()=>{
+    if(currentQty == 0){
+        currentQty = 1;
+        updateQuatity(currentQty);
+    } else{
+        currentQty++
+        updateQuatity(currentQty)
+    }
+});
