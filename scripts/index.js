@@ -105,9 +105,7 @@ nextImgBtn.addEventListener('click', ()=>{
 // Hamburger menu
 hamIcon.addEventListener("click", ()=>{
     navbar.style.transform = 'translateX(0)'
-    // body.style.overflow = 'hidden';
-    navbar.style.height = '150vh'
-    console.log(body)
+    body.style.overflow = 'hidden';
 })
 
 closeIcon.addEventListener("click", ()=>{
